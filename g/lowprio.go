@@ -57,7 +57,7 @@ func setLowPriority(level uintptr) error {
 	return errors.Wrap(err, "set priority class") // wraps nil as nil
 }
 
-func initPrio(prio string) error {
+func InitPrio(prio string) error {
 	switch(prio) {
 	case aboveNormalPriorityClassFlag:
 		return setLowPriority(aboveNormalPriorityClass)

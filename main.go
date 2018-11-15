@@ -35,7 +35,7 @@ func main() {
 	g.InitRootDir()
 	g.InitLocalIps()
 	g.InitRpcClients()
-	g.initPrio()
+	g.InitPrio()
 
 
 	funcs.BuildMappers()
