@@ -117,6 +117,7 @@ MsSQL
 ```
 {
     "debug": true,
+    "lowprio": "realtime",//aboveNormal,belowNormal,high,idle,normal,realtime
 	"logfile": "windows.log",  //日志的输出路径
     "hostname": "",
     "ip": "",

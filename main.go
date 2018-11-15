@@ -9,6 +9,7 @@ import (
 	"github.com/zhongpei/windows-agent/funcs"
 	"github.com/zhongpei/windows-agent/g"
 	"github.com/zhongpei/windows-agent/http"
+
 )
 
 func main() {
@@ -34,6 +35,8 @@ func main() {
 	g.InitRootDir()
 	g.InitLocalIps()
 	g.InitRpcClients()
+	g.initPrio()
+
 
 	funcs.BuildMappers()
 

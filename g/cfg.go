@@ -61,6 +61,7 @@ type GlobalConfig struct {
 	Collector     *CollectorConfig  `json:"collector"`
 	DefaultTags   map[string]string `json:"default_tags"`
 	IgnoreMetrics map[string]bool   `json:"ignore"`
+	LowPriority   string            `json:"lowprio"`
 }
 
 var (

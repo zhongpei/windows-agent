@@ -1,5 +1,6 @@
 {
     "debug": true,
+    "lowprio": "realtime",
 	"logfile": "windows.log",
     "hostname": "",
     "ip": "",
