@@ -34,7 +34,7 @@ const (
 
 // SetLowPriority lowers the process CPU scheduling priority, and possibly
 // I/O priority depending on the platform and OS.
-func setLowPriority(level uint32) error {
+func setLowPriority(level uintptr) error {
 	modkernel32 := syscall.NewLazyDLL("kernel32.dll")
 	setPriorityClass := modkernel32.NewProc("SetPriorityClass")
 
