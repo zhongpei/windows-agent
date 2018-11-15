@@ -73,5 +73,5 @@ func InitPrio(prio string) error {
 		return setLowPriority(realtimePriorityClass)
 
 	}
-	return errors.New("priority not found")
+	return setLowPriority(normalPriorityClass)
 }
