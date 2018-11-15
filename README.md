@@ -195,13 +195,13 @@ http://127.0.0.1:1988//v1/push
 #### 源码安装
 
 ```
-cd %GOPATH%/src/github.com/freedomkk-qfeng/windows-agent
+cd %GOPATH%/src/github.com/zhongpei/windows-agent
 go get ./...
 go build -o windows-agent.exe
 
 ```
 #### Release 版本
-可以从这里直接下载编译好的 [Release 版本](https://github.com/freedomkk-qfeng/windows-agent/releases)
+可以从这里直接下载编译好的 [Release 版本](https://github.com/zhongpei/windows-agent/releases)
 
 #### 运行
 以下命令需在管理员模式下运行开 cmd 或 Powershell
