@@ -9,6 +9,7 @@ package g
 import (
 	"syscall"
 	"github.com/pkg/errors"
+
 )
 
 const (
@@ -72,5 +73,5 @@ func initPrio(prio string) error {
 		return setLowPriority(realtimePriorityClass)
 
 	}
-	return errors.Wrap(err, "prio is not found")
+	return errors.New("priority not found")
 }
