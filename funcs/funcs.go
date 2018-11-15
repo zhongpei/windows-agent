@@ -20,7 +20,7 @@ func BuildMappers() {
 				AgentMetrics,
 				CpuMetrics,
 				NetMetrics,
-				MemMetrics,
+				SwapMemMetrics,
 				DeviceMetrics,
 				DiskIOMetrics,
 				TcpipMetrics,

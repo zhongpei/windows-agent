@@ -36,11 +36,13 @@ func CoreNetMetrics(ifacePrefix []string) (L []*model.MetricValue) {
 	for _, netIf := range netIfs {
 		iface := "iface=" + netIf.Name
 		L = append(L, CounterValue("net.if.in.bytes", netIf.BytesRecv, iface)) //此处乘以8即为bit的流量
+		L = append(L, CounterValue("net.if.in.bit", netIf.BytesRecv*8, iface))
 		L = append(L, CounterValue("net.if.in.packets", netIf.PacketsRecv, iface))
 		L = append(L, CounterValue("net.if.in.errors", netIf.Errin, iface))
 		L = append(L, CounterValue("net.if.in.dropped", netIf.Dropin, iface))
 		L = append(L, CounterValue("net.if.in.fifo.errs", netIf.Fifoin, iface))
 		L = append(L, CounterValue("net.if.out.bytes", netIf.BytesSent, iface)) //此处乘以8即为bit的流量
+		L = append(L, CounterValue("net.if.out.bit", netIf.BytesSent*8, iface))
 		L = append(L, CounterValue("net.if.out.packets", netIf.PacketsSent, iface))
 		L = append(L, CounterValue("net.if.out.errors", netIf.Errout, iface))
 		L = append(L, CounterValue("net.if.out.dropped", netIf.Dropout, iface))

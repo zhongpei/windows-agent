@@ -23,6 +23,11 @@ Windows Metrics
 |mem.memfree      |GAUGE|/|mem free|
 |mem.memfree.percent      |GAUGE|/|memfree percent|
 |mem.memused.percent      |GAUGE|/|memused percent|
+|mem.swaptotal      |GAUGE|/|swap total|
+|mem.swapused      |GAUGE|/|swap used|
+|mem.swapfree      |GAUGE|/|swap free|
+|mem.swapfree.percent      |GAUGE|/|swapfree percent|
+|mem.swapused.percent      |GAUGE|/|swapused percent|
 |df.bytes.total      |GAUGE|mounts=Mountpoint,fstype=fstype|device bytes total|
 |df.bytes.free      |GAUGE|mounts=Mountpoint,fstype=fstype|device bytes free|
 |df.bytes.total      |GAUGE|mounts=Mountpoint,fstype=fstype|device bytes total|
@@ -39,10 +44,12 @@ Windows Metrics
 |disk.io.write requests      |COUNTER|device=device|disk io write requests|
 |disk.io.util      |COUNTER|device=device|disk io util|
 |net.if.in.bytes      |COUNTER|iface=ifname|net if bytes recv|
+|net.if.in.bit      |COUNTER|iface=ifname|net if bit recv|
 |net.if.in.packets      |COUNTER|iface=ifname|net if packets recv|
 |net.if.in.errors      |COUNTER|iface=ifname|net if errors recv|
 |net.if.in.dropped      |COUNTER|iface=ifname|net if dropped recv|
 |net.if.out.bytes      |COUNTER|iface=ifname|net if bytes sent|
+|net.if.out.bit      |COUNTER|iface=ifname|net if bit sent|
 |net.if.out.packets      |COUNTER|iface=ifname|net if packets sent|
 |net.if.out.errors      |COUNTER|iface=ifname|net if errors sent|
 |net.if.out.dropped      |COUNTER|iface=ifname|net if dropped sent|

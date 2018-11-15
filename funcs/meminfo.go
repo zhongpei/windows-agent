@@ -33,3 +33,24 @@ func MemMetrics() []*model.MetricValue {
 	}
 
 }
+
+func SwapMemMetrics()[]*model.MetricValue {
+	meminfo, err := mem.SwapMemory()
+	if err != nil {
+		g.Logger().Println(err)
+		return []*model.MetricValue{}
+	}
+	memTotal := meminfo.Total
+	memUsed := meminfo.Used
+	memFree := meminfo.Free
+	pmemUsed := 100 * float64(memUsed) / float64(memTotal)
+	pmemFree := 100 * float64(memFree) / float64(memTotal)
+
+	return []*model.MetricValue{
+		GaugeValue("mem.swaptotal", memTotal),
+		GaugeValue("mem.swapused", memUsed),
+		GaugeValue("mem.swapfree", memFree),
+		GaugeValue("mem.swapfree.percent", pmemFree),
+		GaugeValue("mem.swapused.percent", pmemUsed),
+	}
+}
