@@ -9,7 +9,6 @@ package g
 import (
 	"syscall"
 	"github.com/pkg/errors"
-
 )
 
 const (
@@ -57,21 +56,30 @@ func setLowPriority(level uintptr) error {
 	return errors.Wrap(err, "set priority class") // wraps nil as nil
 }
 
-func InitPrio(prio string) error {
+func InitPrio(prio string) (err error) {
+
 	switch(prio) {
 	case aboveNormalPriorityClassFlag:
-		return setLowPriority(aboveNormalPriorityClass)
+		err = setLowPriority(aboveNormalPriorityClass)
 	case belowNormalPriorityClassFlag:
-		return setLowPriority(belowNormalPriorityClass)
+		err = setLowPriority(belowNormalPriorityClass)
 	case highPriorityClassFlag:
-		return setLowPriority(highPriorityClass)
+		err = setLowPriority(highPriorityClass)
 	case idlePriorityClassFlag:
-		return setLowPriority(idlePriorityClass)
+		err = setLowPriority(idlePriorityClass)
 	case normalPriorityClassFlag:
-		return setLowPriority(normalPriorityClass)
+		err = setLowPriority(normalPriorityClass)
 	case realtimePriorityClassFlag:
-		return setLowPriority(realtimePriorityClass)
+		err = setLowPriority(realtimePriorityClass)
+	default:
+		err = setLowPriority(normalPriorityClass)
 
 	}
-	return setLowPriority(normalPriorityClass)
+	if err != nil {
+		logger.Printf("set prio %s ok", prio)
+	} else {
+		logger.Printf("set prio %s fail %v", prio, err)
+	}
+
+	return err
 }
