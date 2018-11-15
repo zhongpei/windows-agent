@@ -75,7 +75,7 @@ func InitPrio(prio string) (err error) {
 		err = setLowPriority(normalPriorityClass)
 
 	}
-	if err != nil {
+	if err == nil {
 		logger.Printf("set prio %s ok", prio)
 	} else {
 		logger.Printf("set prio %s fail %v", prio, err)
