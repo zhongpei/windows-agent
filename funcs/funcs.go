@@ -19,11 +19,35 @@ func BuildMappers() {
 			Fs: []func() []*model.MetricValue{
 				AgentMetrics,
 				CpuMetrics,
-				NetMetrics,
 				MemMetrics,
 				SwapMemMetrics,
+
+			},
+			Interval: interval,
+		},
+		FuncsAndInterval{
+			Fs: []func() []*model.MetricValue{
+				NetMetrics,
+
+			},
+			Interval: interval,
+		},
+		FuncsAndInterval{
+			Fs: []func() []*model.MetricValue{
 				DeviceMetrics,
+
+			},
+			Interval: interval,
+		},
+		FuncsAndInterval{
+			Fs: []func() []*model.MetricValue{
 				DiskIOMetrics,
+			},
+			Interval: interval,
+		},
+		FuncsAndInterval{
+			Fs: []func() []*model.MetricValue{
+
 				TcpipMetrics,
 			},
 			Interval: interval,
