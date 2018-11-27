@@ -6,7 +6,7 @@ import (
 	"net/http"
 	_ "net/http/pprof"
 
-	"github.com/zhongpei/windows-agent/g"
+	"windows-agent/g"
 )
 
 type Dto struct {

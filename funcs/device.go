@@ -3,7 +3,7 @@ package funcs
 import (
 	"fmt"
 
-	"github.com/zhongpei/windows-agent/g"
+	"windows-agent/g"
 
 	"github.com/open-falcon/common/model"
 	"github.com/shirou/gopsutil/disk"

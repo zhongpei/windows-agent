@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/zhongpei/windows-agent/g"
+	"windows-agent/g"
 	"github.com/open-falcon/common/model"
 )
 

@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	_ "github.com/denisenkom/go-mssqldb"
-	"github.com/zhongpei/windows-agent/g"
+	"windows-agent/g"
 	"github.com/open-falcon/common/model"
 )
 

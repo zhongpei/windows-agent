@@ -34,7 +34,7 @@ const (
 
 // SetLowPriority lowers the process CPU scheduling priority, and possibly
 // I/O priority depending on the platform and OS.
-func setLowPriority(level uintptr) error {
+func setPriority(level uintptr) error {
 	modkernel32 := syscall.NewLazyDLL("kernel32.dll")
 	setPriorityClass := modkernel32.NewProc("SetPriorityClass")
 
@@ -60,19 +60,19 @@ func InitPrio(prio string) (err error) {
 
 	switch(prio) {
 	case aboveNormalPriorityClassFlag:
-		err = setLowPriority(aboveNormalPriorityClass)
+		err = setPriority(aboveNormalPriorityClass)
 	case belowNormalPriorityClassFlag:
-		err = setLowPriority(belowNormalPriorityClass)
+		err = setPriority(belowNormalPriorityClass)
 	case highPriorityClassFlag:
-		err = setLowPriority(highPriorityClass)
+		err = setPriority(highPriorityClass)
 	case idlePriorityClassFlag:
-		err = setLowPriority(idlePriorityClass)
+		err = setPriority(idlePriorityClass)
 	case normalPriorityClassFlag:
-		err = setLowPriority(normalPriorityClass)
+		err = setPriority(normalPriorityClass)
 	case realtimePriorityClassFlag:
-		err = setLowPriority(realtimePriorityClass)
+		err = setPriority(realtimePriorityClass)
 	default:
-		err = setLowPriority(normalPriorityClass)
+		err = setPriority(normalPriorityClass)
 
 	}
 	if err == nil {
