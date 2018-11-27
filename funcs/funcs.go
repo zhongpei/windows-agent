@@ -47,6 +47,12 @@ func BuildMappers() {
 		},
 		FuncsAndInterval{
 			Fs: []func() []*model.MetricValue{
+				VMCountMetrics,
+			},
+			Interval: interval,
+		},
+		FuncsAndInterval{
+			Fs: []func() []*model.MetricValue{
 
 				TcpipMetrics,
 			},
