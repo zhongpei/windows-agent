@@ -1,0 +1,29 @@
+package: windows-agent
+import:
+- package: github.com/StackExchange/wmi
+  version: ^1.0.0
+- package: github.com/denisenkom/go-mssqldb
+- package: github.com/open-falcon/common
+  subpackages:
+  - model
+- package: github.com/pkg/errors
+  version: ^0.8.0
+- package: github.com/shirou/gopsutil
+  version: ^2.18.10
+  subpackages:
+  - disk
+  - mem
+  - net
+  - process
+- package: github.com/toolkits/file
+- package: github.com/toolkits/net
+- package: github.com/toolkits/slice
+- package: github.com/zhongpei/go-powershell
+  subpackages:
+  - backend
+- package: github.com/zhongpei/windows-agent
+  subpackages:
+  - cron
+  - funcs
+  - g
+  - http
