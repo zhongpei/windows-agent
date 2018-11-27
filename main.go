@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/zhongpei/windows-agent/cron"
-	"github.com/zhongpei/windows-agent/funcs"
-	"github.com/zhongpei/windows-agent/g"
-	"github.com/zhongpei/windows-agent/http"
+	"windows-agent/cron"
+	"windows-agent/funcs"
+	"windows-agent/g"
+	"windows-agent/http"
 
 )
 
