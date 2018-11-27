@@ -1,7 +1,7 @@
 package funcs
 
 import (
-	"github.com/zhongpei/windows-agent/g"
+
 	"github.com/open-falcon/common/model"
 	ps "github.com/zhongpei/go-powershell"
 	"github.com/zhongpei/go-powershell/backend"
