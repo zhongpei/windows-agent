@@ -48,6 +48,7 @@ func BuildMappers() {
 		FuncsAndInterval{
 			Fs: []func() []*model.MetricValue{
 				VMCountMetrics,
+				VMHostNumaNodeMetrics,
 			},
 			Interval: interval,
 		},
